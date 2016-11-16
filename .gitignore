@@ -1,9 +1,12 @@
+# specific folder with optimisation results
+/data/processed/optimisation/
+
 # History files
 .Rhistory
 .Rapp.history
 
-# Session Data files
-.RData
+# Session Data files (removed this, I have some RData that I want to keep, others are ignored explicitly)
+# .RData
 
 # Example code in package build process
 *-Ex.R

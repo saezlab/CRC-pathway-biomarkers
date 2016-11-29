@@ -154,6 +154,9 @@ getAllOptResults_bootstrap <- function(resultsFolder, namesSignals, optimisedPar
         }else{
           cat("Error: please specify which parameters has been optimised")
         }
+        parsNames<-names(parsValues)
+        parsValues[grepl("_k_", parsNames) & parsValues<=0.001]<-0
+        parsValues[grepl("tau_", parsNames) & parsValues<=0.001]<-0
         return(parsValues)
       },
       error=function(cond){

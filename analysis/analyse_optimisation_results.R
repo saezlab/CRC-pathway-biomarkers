@@ -1,5 +1,5 @@
 # packages
-# library()
+library(ggplot2)
 
 # R functions
 source("/Users/eduati/CRC-pathway-biomarkers/R/getAllOptResults.R")
@@ -22,7 +22,6 @@ load("/Users/eduati/CRC-pathway-biomarkers/data/base/namesSignals.RData")
 ######
 # bootstrap
 resultsFolder = "/Users/eduati/CRC-pathway-biomarkers/data/processed/optimisation/bootstrap/"
-optimisedPars=c("k", "tau")
 allOptResults<-getAllOptResults_bootstrap(resultsFolder=resultsFolder, namesSignals = namesSignals, optimisedPars=c("k", "tau"), N=150)
 cellLinesNames<-names(allOptResults)
 

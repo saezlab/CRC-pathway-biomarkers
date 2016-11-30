@@ -78,6 +78,7 @@ mutations.t<-rbind(mutations.t,
                    MSI=rep(0,ncol(mutations.t)))
 mutations.t["MSI", c("CCK81", "HCT116", "SNUC2B", "SNUC5")]<-1
 
+# save(mutations.t, file = "/Users/eduati/CRC-pathway-biomarkers/data/processed/mutations_table.RData")
 
 pdf(paste("/Users/eduati/CRC-pathway-biomarkers/figs/", "dataHeatmap_raw_mutations.pdf", sep=""),width=38,height=6)
 Heatmap(mutations.t, col = colorRamp2(c(0, 1), c("grey99", "grey20"), 0.6),

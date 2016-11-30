@@ -2,7 +2,7 @@
 library(ggplot2)
 
 # R functions
-source("/Users/eduati/CRC-pathway-biomarkers/R/getAllOptResults.R")
+source("/Users/eduati/CRC-pathway-biomarkers/R/getAllOptResults_bootstrap.R")
 source("/Users/eduati/CRC-pathway-biomarkers/R/getAllROC.R")
 
 

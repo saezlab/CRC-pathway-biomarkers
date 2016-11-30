@@ -20,7 +20,9 @@
 #'
 #' @param MIDASpath The path to the MIDAS
 #' @param cellLines Names of the cell lines to process
-#' @return This fuction return a matrix with all data (at time 30) (rows) for each cell line (column)
+#' @param is.normalised True if processed data, False if raw data
+#' @return This fuction return: a matrix with all data (at time 30) (rows) for each cell line (column),
+#' the plot of the histograms by cell line, dendogram of clustered cells
 
 dataFromMIDAS <- function(MIDASpath, cellLines, is.normalised = NA){
   

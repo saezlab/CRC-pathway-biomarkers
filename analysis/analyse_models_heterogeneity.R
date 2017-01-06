@@ -22,6 +22,8 @@ allParameters<-do.call(rbind, lapply(cellLinesNames, function(x){
 rownames(allParameters)<-cellLinesNames
 allParameters<-allParameters[,-which(colnames(allParameters)=="PLX_k_BRAF")] # not a real parameter, fixed at 0.5 to model PLX stimulation of BRAF in BRAF wt cell lines
 
+write.table(allParameters, file="/Users/eduati/CRC-pathway-biomarkers/output/allModelsParameters.txt", sep="\t")
+
 # remove the parameters that are =0 across all cell lines
 ix_0<-which(apply(allParameters,2,function(x){sum(x==0)})!=nrow(allParameters))
 allParameters<-allParameters[,ix_0]

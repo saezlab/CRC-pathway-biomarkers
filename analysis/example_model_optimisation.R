@@ -51,7 +51,13 @@ paramsSSm$dim_refset=30;
 paramsSSm$n_diverse=1000;
 paramsSSm$maxStepSize=Inf;
 paramsSSm$maxNumSteps=10000;
-paramsSSm$transfer_function = 3;
+paramsSSm$transfer_function = 4;
+
+paramsSSm$lambda_tau=0
+paramsSSm$lambda_k=0
+paramsSSm$bootstrap=F
+paramsSSm$SSpenalty_fac=10
+paramsSSm$SScontrolPenalty_fac=1000
 
 opt_pars=parEstimationLBode(cnolist, model, method="essm", ode_parameters=ode_parameters, paramsSSm=paramsSSm, lambda=lambda)
 
